@@ -10,7 +10,34 @@
 #
 ####################################################################################
 
-echo "
+# Option de création
+if [ "$1" == "--create" ]; then
+	echo ""
+	echo "Creation d'un conteneur"
+	echo ""
+# Option de supression
+elif [ "$1" == "--drop" ]; then
+	echo ""
+	echo "Suppression"
+	echo ""
+# Option d'information	
+elif [ "$1" == "--infos" ]; then
+	echo ""
+	echo "Info"
+	echo ""
+# Option de startup 
+elif [ "$1" == "--stat" ]; then
+	echo ""
+	echo "Start"
+	echo ""
+# Option ansible
+elif [ "$1" == "--ansible" ]; then
+	echo ""
+	echo "Ansible"
+	echo ""
+# Si aucune option affichage de l'aide
+else
+	echo "
 options : 
 	-  --create : Lancer des conteneurs
 
@@ -22,6 +49,4 @@ options :
 
 	-  --ansible : déploiement arborescence ansible
 "
-
-VAR="mavariable"
-echo $VAR
+fi
