@@ -10,16 +10,21 @@
 #
 ####################################################################################
 
-# Option de création
+# Option de --create
 if [ "$1" == "--create" ]; then
 	echo ""
 	echo "Creation d'un conteneur"
 	echo ""
+
+	docker run -tid --name $USERNAME-alpine alpine:latest 
 # Option de supression
 elif [ "$1" == "--drop" ]; then
 	echo ""
 	echo "Suppression"
 	echo ""
+
+	docker rm -f $USERNAME-alpine
+
 # Option d'information	
 elif [ "$1" == "--infos" ]; then
 	echo ""
